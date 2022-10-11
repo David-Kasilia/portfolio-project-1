@@ -1,6 +1,7 @@
 import React from 'react';
 import PopularSeries from './homePage/PopularSeries';
 import TodaySeries from './homePage/TodaySeries';
+import RecommendationSeries from './homePage/RecommendationSeries';
 
 const HomePage = () => (
   <div>
@@ -9,6 +10,8 @@ const HomePage = () => (
     <TodaySeries />
     <h2>Most Popular Series</h2>
     <PopularSeries />
+    <h2> Here Is A list Of Recommended Series</h2>
+    <RecommendationSeries />
   </div>
 
 );

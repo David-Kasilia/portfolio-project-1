@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
-import { fetchPopularSeriesList } from '../../redux/series/popularSeries';
+import { fetchRecommendedSeries } from '../../redux/series/recommendationsSeries';
 
-const PopularSeries = () => {
-  const { popularSeries } = useSelector((state) => state.popular);
+const RecommendationSeries = () => {
+  const { recommendedSeries } = useSelector((state) => state.recommendSeries);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPopularSeriesList());
+    dispatch(fetchRecommendedSeries());
   }, []);
 
-  console.log(popularSeries);
+  console.log(recommendedSeries);
 
   const getPosterUrl = (posterPath) => (
     `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`
@@ -19,15 +19,14 @@ const PopularSeries = () => {
 
   return (
     <div>
-      {popularSeries.map((series) => (
+      {recommendedSeries.map((series) => (
         <div key={uuid()}>
           <h3>{series.name}</h3>
           <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
-
         </div>
       ))}
     </div>
   );
 };
 
-export default PopularSeries;
+export default RecommendationSeries;
