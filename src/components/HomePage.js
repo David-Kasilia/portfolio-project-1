@@ -1,18 +1,21 @@
 import React from 'react';
+import '../App.css';
 import PopularSeries from './homePage/PopularSeries';
 import TodaySeries from './homePage/TodaySeries';
 import RecommendationSeries from './homePage/RecommendationSeries';
 import PopularMovies from './homePage/PopularMovies';
 import RecommendationMovies from './homePage/RecommendationMovies';
 import UpcomingMovies from './homePage/UpcomingMovies';
+import MovieSlider from './homePage/MovieSlider';
 
 const HomePage = () => (
   <div>
     <h1>Welcome To The Movie Hub</h1>
-    <h2>Upcoming Movies</h2>
-    <UpcomingMovies />
+    <MovieSlider />
     <h2>Series On Air Today</h2>
     <TodaySeries />
+    <h2>Upcoming Movies</h2>
+    <UpcomingMovies />
     <h2>Most Popular Movies</h2>
     <PopularMovies />
     <h2>Most Popular Series</h2>
