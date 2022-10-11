@@ -18,11 +18,23 @@ const PopularMovies = () => {
   );
 
   return (
-    <div>
+    <div className="pm-container">
       {popularMovies.map((series) => (
-        <div key={uuid()}>
-          <h3>{series.name}</h3>
-          <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
+        <div key={uuid()} className="pm-details">
+          <h3 className="pm-title">{series.original_title}</h3>
+          <img src={getPosterUrl(series.poster_path)} alt="Series Poster" className="pm-image" />
+          <h3 className="pm-date">
+            Release Date:
+            <br />
+            {series.release_date}
+          </h3>
+          <h3 className="pm-movie">Movie Overview:</h3>
+          <h4 className="pm-overview">{series.overview}</h4>
+          <h4 className="pm-vote">
+            Vote Average:
+            <br />
+            {series.vote_average}
+          </h4>
 
         </div>
       ))}

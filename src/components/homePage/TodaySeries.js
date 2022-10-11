@@ -18,11 +18,21 @@ const TodaySeries = () => {
   );
 
   return (
-    <div>
+    <div className="pm-container">
       {todaySeries.map((series) => (
-        <div key={uuid()}>
-          <h3>{series.name}</h3>
-          <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
+        <div key={uuid()} className="pm-details">
+          <h3 className="pm-title">{series.name}</h3>
+          <img src={getPosterUrl(series.poster_path)} alt="Series Poster" className="pm-image" />
+          <h3 className="pm-date">
+            First Air Date:
+            <br />
+            {series.first_air_date}
+          </h3>
+          <h4 className="pm-vote">
+            Vote Average:
+            <br />
+            {series.vote_average}
+          </h4>
         </div>
       ))}
     </div>
