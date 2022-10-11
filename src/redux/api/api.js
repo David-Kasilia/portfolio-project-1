@@ -16,12 +16,16 @@ export const allSeriesListUrl = 'https://api.tvmaze.com/shows';
 export const suggestedSeriesUrl = 'https://api.themoviedb.org/3/tv/top_rated?api_key=646ccadcf1e1a5038dd55fa6a1d01f39&language=en-US';
 
 // TMDB API: Upcoming Series List
-export const upcomingSeriesListUrl = 'https://api.themoviedb.org/3/tv/upcoming?api_key=646ccadcf1e1a5038dd55fa6a1d01f39&language=en-US';
+export const todaySeriesListUrl = 'https://api.themoviedb.org/3/tv/airing_today?api_key=646ccadcf1e1a5038dd55fa6a1d01f39&language=en-US';
 
-// TMDB API: Latest Movies List
+// // TMDB API: Latest Movies List
+// export const popularMoviesUrl =
 
-// TMDB API: All Movies List
+// // TMDB API: All Movies List
+// export const popularMoviesUrl =
 
-// TMDB API: Suggested Movies List
+// // TMDB API: Suggested Movies List
+// export const popularMoviesUrl =
 
-// TMDB API: Upcoming Movies List
+// // TMDB API: Upcoming Movies List
+// export const popularMoviesUrl =

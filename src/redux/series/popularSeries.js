@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 import { popularSeriesUrl } from '../api/api';
 
 // Actions
@@ -9,26 +9,17 @@ const initialState = {
   popularSeries: [],
 };
 
-// Fetch Popular Series List Function
-export const fetchPopularSeries = createAsyncThunk(
-  FETCH_POPULAR_SERIES,
-  async (args, { dispatch }) => {
-    const response = await fetch(popularSeriesUrl);
-    const data = await response.json();
-    const popularSeries = Object.keys(data).map((key) => {
-      const popular = data[key];
-      return {
-        id: key,
-        ...popular,
-      };
-    });
-    dispatch({
-      type: FETCH_POPULAR_SERIES,
-      payload: popularSeries,
-    });
-    return popularSeries;
-  },
-);
+// Actions
+export const fetchPopularSeries = (payload) => ({
+  type: FETCH_POPULAR_SERIES,
+  payload,
+});
+
+export const fetchPopularSeriesList = () => async (dispatch) => {
+  const popularSeriesData = await axios.get(popularSeriesUrl);
+  const data = await popularSeriesData.data;
+  dispatch(fetchPopularSeries(data.results));
+};
 
 const popularSeriesReducer = (state = initialState, action) => {
   switch (action.type) {

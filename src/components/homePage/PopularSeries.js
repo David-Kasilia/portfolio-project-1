@@ -1,33 +1,37 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPopularSeries } from '../../redux/series/popularSeries';
+// import uuid from 'react-uuid';
+import { fetchPopularSeriesList } from '../../redux/series/popularSeries';
 
 const PopularSeries = () => {
   const { popularSeries } = useSelector((state) => state.popular);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPopularSeries());
+    dispatch(fetchPopularSeriesList());
   }, []);
 
-  //   console.log(popularSeries[1]);
+  console.log(popularSeries);
 
-  const seriesObj = popularSeries[1];
-  console.log(seriesObj);
-
-  const getPosterUrl = (posterPath) => (
-    `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`
-  );
+  // const getPosterUrl = (posterPath) => (
+  //   `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`
+  // );
 
   return (
     <div>
-      {Object.values(seriesObj).map((series) => (
-        <div key={series.id}>
-          <h3>{series.name}</h3>
-          <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
+      {/* { !popularSeries
+        ? <h4>Loading....</h4>
+        : (
+          <div>
+            {Object.keys(popularSeries[1]).map((series) => (
+              <div key={uuid()}>
+                <h3>{series.name}</h3>
+                <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
 
-        </div>
-      ))}
+              </div>
+            ))}
+          </div>
+        )} */}
     </div>
   );
 };
