@@ -23,7 +23,7 @@ const PopularSeries = () => {
         <div key={uuid()}>
           <h3>{series.name}</h3>
           <img src={getPosterUrl(series.poster_path)} alt="Series Poster" />
-
+          <h4>{series.first_air_date}</h4>
         </div>
       ))}
     </div>
