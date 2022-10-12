@@ -49,10 +49,6 @@ nav {
   color: white;
 }
 
-.link:visited {
-  color: #fff;
-}
-
 .navItems {
   display: flex;
   flex-direction: row;
@@ -97,6 +93,10 @@ nav {
 .link:hover::before {
   transform: translateY(0);
   transition: transform 0.25s ease-out;
+}
+
+.link:visited {
+  color: #fff;
 }
 
 .now {
