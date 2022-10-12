@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import uuid from 'react-uuid';
@@ -10,8 +11,6 @@ const RecommendationMovies = () => {
   useEffect(() => {
     dispatch(fetchRecommendedMovies());
   }, []);
-
-  console.log(recommendedMovies);
 
   const getPosterUrl = (posterPath) => (
     `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`

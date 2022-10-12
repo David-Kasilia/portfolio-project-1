@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,8 +15,6 @@ const MovieSlider = () => {
   useEffect(() => {
     dispatch(fetchPlayingMovies());
   }, []);
-
-  console.log(playingMovies);
 
   const settings = {
     dots: true,
