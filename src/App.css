@@ -21,6 +21,7 @@ a {
 
 .logo-title {
   height: 14rem;
+  margin-top: -2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -42,6 +43,10 @@ a {
 
 .nav-container {
   background-color: rgba(44, 6, 8, 0.65);
+}
+
+nav {
+  margin-top: -5rem;
 }
 
 .navItems {
@@ -83,4 +88,12 @@ a {
 .link:hover::before {
   transform: translateY(0);
   transition: transform 0.25s ease-out;
+}
+
+.now {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-top: -0.2rem;
+  text-align: center;
 }

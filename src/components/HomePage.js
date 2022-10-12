@@ -10,7 +10,11 @@ import MovieSlider from './homePage/MovieSlider';
 
 const HomePage = () => (
   <div>
-    <h1>Welcome To The Movie Hub</h1>
+    <h2 className="now">
+      Welcome To The Movie Mania
+      <br />
+      Here are the Movies That Are Currently Playing In Theatre
+    </h2>
     <MovieSlider />
     <h2>Series On Air Today</h2>
     <TodaySeries />
