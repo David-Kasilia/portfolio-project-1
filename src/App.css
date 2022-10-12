@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("./assets/back.jpg");
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-title {
+  height: 14rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(44, 6, 8, 0.65);
+}
+
+.logo {
+  height: 100%;
+}
+
+.title {
+  margin-right: 30rem;
+  margin-top: 4.5rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3.4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.nav-container {
+  background-color: rgba(44, 6, 8, 0.65);
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.link {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 5px 5px;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: color 0.3s ease-out;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% - 2px));
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, rgb(255, 0, 0) 0%, #000 100%);
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover {
+  color: white;
+}
+
+.link:hover::before {
+  transform: translateY(0);
+  transition: transform 0.25s ease-out;
+}

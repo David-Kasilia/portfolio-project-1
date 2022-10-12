@@ -4,21 +4,21 @@ import { FaUserCircle } from 'react-icons/fa';
 
 const NavBar = () => (
   <nav>
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
+    <ul className="navItems">
+      <li className="navItem">
+        <NavLink to="/" className="link">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/movies">Movies</NavLink>
+      <li className="navItem">
+        <NavLink to="/movies" className="link">Movies</NavLink>
       </li>
-      <li>
-        <NavLink to="/series">Series</NavLink>
+      <li className="navItem">
+        <NavLink to="/series" className="link">Series</NavLink>
       </li>
-      <li>
-        <NavLink to="/about">About</NavLink>
+      <li className="navItem">
+        <NavLink to="/about" className="link">About</NavLink>
       </li>
-      <li>
-        <NavLink to="/profile"><FaUserCircle /></NavLink>
+      <li className="navItem">
+        <NavLink to="/profile" className="link"><FaUserCircle /></NavLink>
       </li>
     </ul>
   </nav>
