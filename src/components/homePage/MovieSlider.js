@@ -26,6 +26,7 @@ const MovieSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 8000,
+    pauseOnHover: true,
   };
 
   const getPosterUrl = (posterPath) => (
@@ -34,19 +35,19 @@ const MovieSlider = () => {
 
   return (
     <div className="slider-container">
-      <Slider {...settings}>
+      <Slider {...settings} className="mainSlider">
         {playingMovies.map((series) => (
-          <div key={uuid()} className="pm-details">
-            <h3 className="pm-title">{series.original_title}</h3>
-            <img src={getPosterUrl(series.poster_path)} alt="Series Poster" className="pm-image" />
-            <h3 className="pm-date">
+          <div key={uuid()} className="ms-details">
+            <h3 className="ms-title">{series.original_title}</h3>
+            <img src={getPosterUrl(series.poster_path)} alt="Series Poster" className="ms-image" />
+            <h3 className="ms-date">
               Release Date:
               <br />
               {series.release_date}
             </h3>
-            <h3 className="pm-movie">Movie Overview:</h3>
-            <h4 className="pm-overview">{series.overview}</h4>
-            <h4 className="pm-vote">
+            <h3 className="ms-movie">Movie Overview:</h3>
+            <h4 className="ms-overview">{series.overview}</h4>
+            <h4 className="ms-vote">
               Vote Average:
               <br />
               {series.vote_average}

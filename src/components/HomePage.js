@@ -16,17 +16,17 @@ const HomePage = () => (
       Here are the Movies That Are Currently Playing In Theatre
     </h2>
     <MovieSlider />
-    <h2>Series On Air Today</h2>
+    <h2 className="now">Series On Air Today</h2>
     <TodaySeries />
-    <h2>Upcoming Movies</h2>
+    <h2 className="now">Upcoming Movies</h2>
     <UpcomingMovies />
-    <h2>Most Popular Movies</h2>
+    <h2 className="now">Most Popular Movies</h2>
     <PopularMovies />
-    <h2>Most Popular Series</h2>
+    <h2 className="now">Most Popular Series</h2>
     <PopularSeries />
-    <h2> Here Is A list Of Recommended Series</h2>
+    <h2 className="now"> Here Is A list Of Recommended Series</h2>
     <RecommendationSeries />
-    <h2>Heres is A List Of Recommended Movies</h2>
+    <h2 className="now">Heres is A List Of Recommended Movies</h2>
     <RecommendationMovies />
   </div>
 
