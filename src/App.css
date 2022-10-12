@@ -163,6 +163,7 @@ nav {
   padding-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.95);
   color: white;
 }
@@ -176,6 +177,7 @@ nav {
   border-style: solid;
   border-width: 0.15rem;
   border-color: rgb(107, 7, 7);
+  padding: 0.5rem;
 }
 
 .pm-image {
@@ -202,4 +204,10 @@ nav {
   margin-right: 0.85rem;
   font-family: "Roboto Slab", serif;
   font-size: 0.9rem;
+}
+
+.pm-overview {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8rem;
 }
